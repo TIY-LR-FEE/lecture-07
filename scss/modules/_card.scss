@@ -1,0 +1,101 @@
+.card {
+  width: 677px;
+  height: 373px;
+  background-color: #333333;
+
+  &--nav {
+    padding: 14px;
+    font-size: $small-font;
+  }
+
+  &--nav-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $gray;
+
+    &:hover {
+      color: #5EBAEB;
+    }
+
+    &::after {
+      margin: 0 0 0 4px;
+      content: "|";
+    }
+
+    &:hover::after {
+      color: $gray;
+    }
+
+  }
+
+  /* IMDbPro Link */
+  &--nav-item:nth-child(4) {
+    text-transform: none;
+  }
+
+  /* No Bars on More or Share */
+  &--nav-item:last-child::after,
+  &--nav-item:nth-last-child(2)::after {
+    content: "";
+    margin: 0;
+  }
+
+  &--nav-item:last-child {
+    margin: 0 0 0 80px;
+  }
+
+  &--info {
+    @extend .clearfix;
+    padding: 0 14px;
+  }
+
+  &--add-button {
+    width: 40px;
+    height: 44px;
+    background-color: #5B5B5B;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 6px 0 0;
+    float: left;
+  }
+
+  &--title-box {
+    float: left;
+    width: 410px;
+    margin: 0 0 0 10px;
+  }
+
+  &--title {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0 0 4px;
+  }
+
+  &--title-small {
+    color: $gray;
+    font-size: 1rem;
+  }
+
+  &--meta {
+    color: $gray;
+    font-size: $small-font;
+  }
+
+  &--images {
+    padding: 14px 14px 0 0;
+  }
+
+  &--image {
+    width: 182px;
+    float: left;
+    margin: 0 3px 0 0;
+  }
+
+  &--video {
+    width: 477px;
+    float: left;
+  }
+
+}
